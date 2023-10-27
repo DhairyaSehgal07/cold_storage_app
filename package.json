@@ -1,0 +1,29 @@
+{
+  "name": "cold_storage_project",
+  "version": "1.0.0",
+  "description": "Minor project",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "server": "nodemon backend/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DhairyaSehgal07/cold_storage_app.git"
+  },
+  "author": "Dhairya Sehgal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DhairyaSehgal07/cold_storage_app/issues"
+  },
+  "homepage": "https://github.com/DhairyaSehgal07/cold_storage_app#readme",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "mongoose": "^7.6.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
