@@ -2,7 +2,7 @@ import express from "express";
 import dotenv from "dotenv";
 import cookieParser from "cookie-parser";
 import farmerRouter from "./routes/farmerRoutes.js";
-import storageOwnerRouter from "./routes/storageOwnerRoutes.js";
+import storageOwnerRouter from "./routes/storeAdminRoutes.js";
 import { notFound, errorHandler } from "./middleware/errorMiddleware.js";
 import connectDB from "./config/db.js";
 
@@ -17,7 +17,7 @@ app.use(cookieParser());
 const port = process.env.PORT || 5000;
 
 app.use("/api/farmers", farmerRouter);
-app.use("/api/owners", storageOwnerRouter);
+app.use("/api/store-admin", storageOwnerRouter);
 
 app.get("/", (req, res) => {
   res.send("Server is ready");

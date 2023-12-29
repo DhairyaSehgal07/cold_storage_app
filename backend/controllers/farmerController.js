@@ -7,7 +7,7 @@ import generateToken from "../utils/generateToken.js";
 //route POST/api/farmers/register
 //@access Public
 const registerFarmer = asyncHandler(async (req, res) => {
-  const { name, email, password } = req.body;
+  const { name, address, phone, email, password } = req.body;
 
   const farmerExists = await Farmer.findOne({ email });
 
@@ -18,6 +18,8 @@ const registerFarmer = asyncHandler(async (req, res) => {
 
   const farmer = await Farmer.create({
     name,
+    address,
+    phone,
     email,
     password,
   });
@@ -27,6 +29,8 @@ const registerFarmer = asyncHandler(async (req, res) => {
     res.status(201).json({
       id: farmer._id,
       name: farmer.name,
+      address: farmer.address,
+      phone: farmer.phone,
       email: farmer.email,
       password: farmer.password,
     });
@@ -77,9 +81,12 @@ const logoutFarmer = asyncHandler(async (req, res) => {
 //@access Private
 
 const getFarmerProfile = asyncHandler(async (req, res) => {
+  console.log(req.farmer);
   const farmer = {
     _id: req.farmer._id,
     name: req.farmer.name,
+    address: req.farmer.address,
+    phone: req.farmer.phone,
     email: req.farmer.email,
   };
   res.status(200).json(farmer);
@@ -95,6 +102,8 @@ const updateFarmerProfile = asyncHandler(async (req, res) => {
   if (farmer) {
     farmer.name = req.body.name || farmer.name;
     farmer.address = req.body.address || farmer.address;
+    farmer.phone = req.body.phone || farmer.phone;
+    farmer.address = req.body.address || farmer.address;
     farmer.email = req.body.email || farmer.email;
 
     if (req.body.password) {
@@ -106,6 +115,8 @@ const updateFarmerProfile = asyncHandler(async (req, res) => {
     res.status(200).json({
       _id: updatedFarmer._id,
       name: updatedFarmer.name,
+      address: updatedFarmer.address,
+      phone: updatedFarmer.phone,
       email: updatedFarmer.email,
     });
   } else {

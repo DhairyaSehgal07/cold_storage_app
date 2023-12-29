@@ -1,17 +1,9 @@
-import mongoose from "mongoose";
+import mongoose, { mongo } from "mongoose";
 import bcrypt from "bcryptjs";
 
-const farmerSchema = mongoose.Schema(
+const storeAdminSchema = mongoose.Schema(
   {
     name: {
-      type: String,
-      required: true,
-    },
-    address: {
-      type: String,
-      required: true,
-    },
-    phone: {
       type: String,
       required: true,
     },
@@ -25,14 +17,19 @@ const farmerSchema = mongoose.Schema(
       type: String,
       required: true,
     },
+    isSuperAdmin: {
+      type: Boolean,
+      default: false,
+      required: false,
+    },
   },
   {
     timestamps: true,
   }
 );
 
-farmerSchema.pre("save", async function (next) {
-  // here the this keyword means Farmer.Create in the controller function
+storeAdminSchema.pre("save", async function (next) {
+  //here the this keyword means StoreAdmin.create in controller
   if (!this.isModified("password")) {
     next();
   }
@@ -41,10 +38,9 @@ farmerSchema.pre("save", async function (next) {
   this.password = await bcrypt.hash(this.password, salt);
 });
 
-farmerSchema.methods.matchPassword = async function (enteredPassword) {
+storeAdminSchema.methods.matchPassword = async function (enteredPassword) {
   return await bcrypt.compare(enteredPassword, this.password);
 };
 
-const Farmer = mongoose.model("farmers", farmerSchema);
-
-export default Farmer;
+const StoreAdmin = mongoose.model("storeAdmin", storeAdminSchema);
+export default StoreAdmin;
