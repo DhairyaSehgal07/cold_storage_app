@@ -25,6 +25,16 @@ const farmerSchema = mongoose.Schema(
       type: String,
       required: true,
     },
+    registeredStoreAdmin: {
+      type: String,
+      required: true,
+    },
+    orders: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Order",
+      },
+    ],
   },
   {
     timestamps: true,

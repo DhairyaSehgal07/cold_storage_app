@@ -7,7 +7,8 @@ import generateToken from "../utils/generateToken.js";
 //route POST/api/farmers/register
 //@access Public
 const registerFarmer = asyncHandler(async (req, res) => {
-  const { name, address, phone, email, password } = req.body;
+  const { name, address, phone, email, password, registeredStoreAdmin } =
+    req.body;
 
   const farmerExists = await Farmer.findOne({ email });
 
@@ -22,6 +23,7 @@ const registerFarmer = asyncHandler(async (req, res) => {
     phone,
     email,
     password,
+    registeredStoreAdmin,
   });
 
   if (farmer) {
@@ -33,6 +35,7 @@ const registerFarmer = asyncHandler(async (req, res) => {
       phone: farmer.phone,
       email: farmer.email,
       password: farmer.password,
+      registeredStoreAdmin: registeredStoreAdmin,
     });
   } else {
     res.status(400);
@@ -81,15 +84,37 @@ const logoutFarmer = asyncHandler(async (req, res) => {
 //@access Private
 
 const getFarmerProfile = asyncHandler(async (req, res) => {
-  console.log(req.farmer);
-  const farmer = {
-    _id: req.farmer._id,
-    name: req.farmer.name,
-    address: req.farmer.address,
-    phone: req.farmer.phone,
-    email: req.farmer.email,
-  };
-  res.status(200).json(farmer);
+  const farmerId = req.farmer._id;
+
+  try {
+    // Fetch the farmer along with their orders
+    const farmer = await Farmer.findById(farmerId).populate("orders");
+
+    if (!farmer) {
+      res.status(404);
+      throw new Error("Farmer not found");
+    }
+
+    const { _id, name, address, phone, email, registeredStoreAdmin, orders } =
+      farmer;
+
+    const farmerProfile = {
+      _id,
+      name,
+      address,
+      phone,
+      email,
+      registeredStoreAdmin,
+      orders,
+    };
+
+    res.status(200).json(farmerProfile);
+  } catch (error) {
+    res.status(500).json({
+      status: "Error",
+      message: error.message,
+    });
+  }
 });
 
 //@desc Updates the logged in farmer's profile

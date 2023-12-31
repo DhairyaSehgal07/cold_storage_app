@@ -1,9 +1,11 @@
 import mongoose, { connect } from "mongoose";
+import createStoreAdmin from "../utils/addSuperAdmin.js";
 
 const connectDB = async () => {
   try {
     const conn = await mongoose.connect(process.env.MONGO_URI);
     console.log(`MongoDb Connected: ${conn.connection.host}`);
+    await createStoreAdmin();
   } catch (error) {
     console.error(`Error: ${error.message}`);
     process.exit(1);
