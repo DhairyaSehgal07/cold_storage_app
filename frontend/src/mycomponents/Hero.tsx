@@ -2,26 +2,77 @@ import { Link } from "react-router-dom";
 const Hero = () => {
   return (
     <>
-      <section className="bg-secondary py-[9.6rem] px-[3.2rem]">
-        <div className="grid grid-cols-2 max-w-[130rem] mx-auto items-center gap-[9.6rem] ">
-          <div className="">
-            <h1 className="text-[5.2rem] font-custom font-bold leading-[1.05] text-[#333] tracking-[-0.5px] mb-[3.2rem] ">
+      <section className="bg-secondary px-[3.2rem] py-[9.6rem]">
+        <div className="mx-auto grid max-w-[120rem] grid-cols-1 items-center py-[3.2rem] sm:gap-[4.8rem] md:gap-[6.4rem] md:py-[0.8rem] lg:grid-cols-2 lg:gap-[9.6rem] xl:max-w-[130rem] ">
+          <div className="text-center lg:text-left">
+            <h1 className="mb-[3.2rem] font-custom text-[4.2rem] font-bold leading-[1.05] tracking-[-0.5px] text-[#333] xl:text-[4.8rem] ">
               Farmers' yields, cold-stored for freshness and swift distribution.
             </h1>
-            <p className="text-[2rem] font-custom font-normal leading-[1.6] mb-[4.8rem] ">
+            <p className="mb-[4.8rem] font-custom text-[2rem] font-normal leading-[1.6] ">
               Elevate farmers' well-being with a personalized cold storage
               subscription, offering flexibility to access crops at their
               convenience for a continuous supply of healthful harvests, 365
               days a year.
             </p>
             <Link to="#">
-              <a className="inline-block font-semibold font-custom bg-primary text-foreground text-[2rem] py-[1.6rem] px-[3.2rem] rounded-[9px] no-underline mr-[1.6rem] duration-100 hover:bg-primary/90 shadow  ">
+              <a className="mr-[1.6rem] inline-block rounded-[9px] bg-primary px-[3.2rem] py-[1.6rem] font-custom text-[2rem] font-semibold text-foreground no-underline shadow duration-100 hover:bg-primary/90 hover:text-secondary  ">
                 Start storing
               </a>
-              <a className="inline-block font-semibold font-custom bg-primary text-foreground text-[2rem] py-[1.6rem] px-[3.2rem] rounded-[9px] no-underline ml-[1.6rem] duration-100 hover:bg-primary/90 shadow">
+              <a className="ml-[1.6rem] inline-block rounded-[9px] bg-primary px-[3.2rem] py-[1.6rem] font-custom text-[2rem] font-semibold text-foreground no-underline shadow duration-100 hover:bg-primary/90 hover:text-secondary">
                 Learn more &darr;
               </a>
             </Link>
+
+            <div className="delivered-meals mt-[8rem] flex items-center gap-[1.6rem]">
+              <div className="delivered-imgs flex">
+                <img
+                  className="mr-[-1.6rem] h-[4.8rem] w-[4.8rem] rounded-full border-[3px] border-solid border-[#fdf2e9] "
+                  src="./customers/customer-1.jpg"
+                  alt="Customer photo"
+                />
+                <img
+                  className="mr-[-1.6rem] h-[4.8rem] w-[4.8rem] rounded-full border-[3px] border-solid border-[#fdf2e9] "
+                  src="./customers/customer-2.jpg"
+                  alt="Customer photo"
+                />
+                <img
+                  className="mr-[-1.6rem] h-[4.8rem] w-[4.8rem] rounded-full border-[3px] border-solid border-[#fdf2e9] "
+                  src="./customers/customer-3.jpg"
+                  alt="Customer photo"
+                />
+                <img
+                  className="mr-[-1.6rem] h-[4.8rem] w-[4.8rem] rounded-full border-[3px] border-solid border-[#fdf2e9] "
+                  src="./customers/customer-4.jpg"
+                  alt="Customer photo"
+                />
+                <img
+                  className="mr-[-1.6rem] h-[4.8rem] w-[4.8rem] rounded-full border-[3px] border-solid border-[#fdf2e9] "
+                  src="./customers/customer-5.jpg"
+                  alt="Customer photo"
+                />
+                <img
+                  className="mr-[0.8rem] h-[4.8rem] w-[4.8rem] rounded-full border-[3px] border-solid border-[#fdf2e9] "
+                  src="./customers/customer-6.jpg"
+                  alt="Customer photo"
+                />
+              </div>
+              <p className="delivered-text text-[1.8rem] font-semibold">
+                <span className="font-bold text-primary">250,000+</span> farmers
+                joined last year!
+              </p>
+            </div>
+          </div>
+          <div className=" text-center ">
+            <picture>
+              <source src="./hero.webp" type="image/webp" />
+              <source src="./hero-min.png" type="image/png" />
+
+              <img
+                src="./hero-min.png"
+                className="w-[60%]  lg:w-[100%]"
+                alt="Woman enjoying food, meals in storage container, and food bowls on a table"
+              />
+            </picture>
           </div>
         </div>
       </section>
