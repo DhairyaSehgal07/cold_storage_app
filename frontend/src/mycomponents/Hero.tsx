@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 const Hero = () => {
   return (
     <>
-      <section className="bg-secondary px-[3.2rem] py-[9.6rem]">
+      <section className="bg-secondary px-[3.2rem] pb-[6.4rem]  pt-[2.4rem] sm:py-[9.6rem]">
         <div className="mx-auto grid max-w-[120rem] grid-cols-1 items-center py-[3.2rem] sm:gap-[4.8rem] md:gap-[6.4rem] md:py-[0.8rem] lg:grid-cols-2 lg:gap-[9.6rem] xl:max-w-[130rem] ">
           <div className="text-center lg:text-left">
             <h1 className="mb-[3.2rem] font-custom text-[4.2rem] font-bold leading-[1.05] tracking-[-0.5px] text-[#333] xl:text-[4.8rem] ">
@@ -15,15 +15,15 @@ const Hero = () => {
               days a year.
             </p>
             <Link to="#">
-              <a className="mr-[1.6rem] inline-block rounded-[9px] bg-primary px-[3.2rem] py-[1.6rem] font-custom text-[2rem] font-semibold text-foreground no-underline shadow duration-100 hover:bg-primary/90 hover:text-secondary  ">
+              <a className="mr-[1rem] inline-block rounded-[9px] bg-primary px-[2.4rem] py-[1.6rem] font-custom text-[2rem] font-semibold text-foreground sm:mr-[1.6rem] sm:px-[3.2rem] sm:py-[1.6rem] ">
                 Start storing
               </a>
-              <a className="ml-[1.6rem] inline-block rounded-[9px] bg-primary px-[3.2rem] py-[1.6rem] font-custom text-[2rem] font-semibold text-foreground no-underline shadow duration-100 hover:bg-primary/90 hover:text-secondary">
+              <a className="ml-[1rem] inline-block rounded-[9px] bg-primary px-[2.4rem] py-[1.6rem] font-custom text-[2rem] font-semibold text-foreground sm:ml-[1.6rem] sm:px-[3.2rem] sm:py-[1.6rem]">
                 Learn more &darr;
               </a>
             </Link>
 
-            <div className="delivered-meals mt-[8rem] flex items-center gap-[1.6rem]">
+            <div className="delivered-meals mt-[4rem] flex items-center justify-center gap-[1.6rem] lg:mt-[8rem]  ">
               <div className="delivered-imgs flex">
                 <img
                   className="mr-[-1.6rem] h-[4.8rem] w-[4.8rem] rounded-full border-[3px] border-solid border-[#fdf2e9] "
@@ -51,19 +51,19 @@ const Hero = () => {
                   alt="Customer photo"
                 />
                 <img
-                  className="mr-[0.8rem] h-[4.8rem] w-[4.8rem] rounded-full border-[3px] border-solid border-[#fdf2e9] "
+                  className=" h-[4.8rem] w-[4.8rem] rounded-full border-[3px] border-solid border-[#fdf2e9] "
                   src="./customers/customer-6.jpg"
                   alt="Customer photo"
                 />
               </div>
-              <p className="delivered-text text-[1.8rem] font-semibold">
+              <p className=" delivered-text ml-16 text-[1.8rem] font-semibold sm:ml-0">
                 <span className="font-bold text-primary">250,000+</span> farmers
                 joined last year!
               </p>
             </div>
           </div>
-          <div className=" text-center ">
-            <picture>
+          <div className="">
+            <picture className="align-center  mt-[3.2rem] flex justify-center lg:mt-0 ">
               <source src="./hero.webp" type="image/webp" />
               <source src="./hero-min.png" type="image/png" />
 

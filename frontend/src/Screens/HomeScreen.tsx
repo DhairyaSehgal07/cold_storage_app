@@ -4,7 +4,7 @@ import HowItWorks from "@/mycomponents/HowItWorks";
 import Testimonials from "@/mycomponents/Testimonials";
 import Pricing from "@/mycomponents/Pricing";
 import Footer from "@/mycomponents/Footer";
-import SignUpForm from "@/mycomponents/SignUpForm";
+import About from "@/mycomponents/About";
 
 const HomeScreen = () => {
   return (
@@ -14,8 +14,7 @@ const HomeScreen = () => {
       <HowItWorks />
       <Testimonials />
       <Pricing />
-      <SignUpForm />
-
+      <About />
       <Footer />
     </>
   );

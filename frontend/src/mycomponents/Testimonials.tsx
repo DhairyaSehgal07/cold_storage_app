@@ -2,11 +2,10 @@ const Testimonials = () => {
   return (
     <>
       <section
-        style={{ gridTemplateColumns: "56fr 45fr" }}
-        className="gapy-y-[9.6rem] mt-[10rem] grid grid-cols-2 items-center gap-x-[6.4rem] bg-secondary"
+        className="mt-[10rem] grid grid-cols-1 items-center gap-x-[6.4rem] gap-y-[9.6rem] bg-secondary lg:grid-cols-2"
         id="testimonials"
       >
-        <div className="testimonials-container p-[9.6rem]">
+        <div className="testimonials-container  px-[3.2rem] py-[9.6rem] lg:p-[9.6rem]">
           <span className="subheading mb-[1.6rem] block text-[1.6rem] font-medium uppercase tracking-[0.075rem] text-foreground">
             Testimonials
           </span>
@@ -14,7 +13,7 @@ const Testimonials = () => {
             Once you try it, you won't go back to the old ways.
           </h2>
 
-          <div className="testimonials grid grid-cols-2 gap-x-[8rem] gap-y-[4.8rem] ">
+          <div className="testimonials grid  grid-cols-1 gap-x-[8rem] gap-y-[4.8rem] md:grid-cols-2 ">
             <figure className="testimonial">
               <img
                 className="testimonial-img mb-[1.2rem] w-[6.4rem] rounded-full "
@@ -81,7 +80,7 @@ const Testimonials = () => {
           </div>
         </div>
 
-        <div className="gallery grid gap-[3.2rem] p-[1.6rem] sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ">
+        <div className="gallery grid grid-cols-4 gap-[3.2rem] p-[1.6rem] sm:grid-rows-2 md:grid-cols-6  md:grid-rows-2 md:gap-[1.2rem] lg:grid-cols-2 xl:grid-cols-3">
           <figure className="gallery-item duration-400 block w-full overflow-hidden transition-all hover:scale-110 ">
             <img
               src="./gallery/gallery-1.jpg"
