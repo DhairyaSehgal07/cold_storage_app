@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 import {
   Sheet,
@@ -38,9 +39,9 @@ const Navbar = () => {
           <header
             className={`relative flex h-[8rem] items-center justify-between bg-gray-200 px-[4.8rem] ${navbarClass}`}
           >
-            <a href="#">
+            <Link to="/">
               <h1 className="text-5xl">Logo</h1>
-            </a>
+            </Link>
 
             <nav className="main-nav">
               <Sheet>
@@ -81,16 +82,16 @@ const Navbar = () => {
                               href="your-link-for-Meals"
                               className="inline-block cursor-pointer font-custom    font-medium no-underline duration-100  active:underline"
                             >
-                              Aboutwh
+                              About
                             </a>
                           </li>
                           <li>
-                            <a
-                              href="your-link-for-Sign-in"
-                              className="inline-block cursor-pointer  rounded-[9px]  bg-primary px-[3.2rem] py-[1rem] font-custom text-3xl font-bold no-underline duration-100  hover:bg-primary/90 hover:text-secondary"
+                            <Link
+                              to="/login"
+                              className="inline-block cursor-pointer  rounded-[9px]  bg-primary px-[3.2rem] py-[1rem] font-custom text-3xl font-bold text-secondary no-underline duration-100  hover:bg-primary/90 hover:text-secondary"
                             >
                               Sign in
-                            </a>
+                            </Link>
                           </li>
                         </ul>
                       </nav>
@@ -106,9 +107,9 @@ const Navbar = () => {
           <header
             className={`relative flex h-[9.6rem] items-center justify-between bg-gray-200 px-[4.8rem] ${navbarClass}`}
           >
-            <a href="#">
+            <Link to="/">
               <h1 className="text-5xl">Logo</h1>
-            </a>
+            </Link>
 
             <nav className="main-nav">
               <ul className="flex list-none items-center gap-[4.8rem]">
@@ -145,12 +146,12 @@ const Navbar = () => {
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="your-link-for-Sign-in"
-                    className="inline-block cursor-pointer  rounded-[9px]  bg-primary px-[2.4rem] py-[1.2rem] font-custom text-3xl font-bold no-underline duration-100  hover:bg-primary/90 hover:text-secondary"
+                  <Link
+                    to="/login"
+                    className="inline-block cursor-pointer rounded-[9px]  bg-primary  px-[2.4rem] py-[1.2rem] font-custom text-3xl font-bold text-secondary no-underline duration-100  hover:bg-primary/85 "
                   >
                     Sign in
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </nav>

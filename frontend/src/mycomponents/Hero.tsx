@@ -15,10 +15,10 @@ const Hero = () => {
               days a year.
             </p>
             <Link to="#">
-              <a className="mr-[1rem] inline-block rounded-[9px] bg-primary px-[2.4rem] py-[1.6rem] font-custom text-[2rem] font-semibold text-foreground sm:mr-[1.6rem] sm:px-[3.2rem] sm:py-[1.6rem] ">
+              <a className="mr-[1rem] inline-block rounded-[9px] bg-primary px-[2.4rem] py-[1.6rem] font-custom text-[2rem] font-semibold text-secondary hover:bg-primary/85 sm:mr-[1.6rem] sm:px-[3.2rem] sm:py-[1.6rem] ">
                 Start storing
               </a>
-              <a className="ml-[1rem] inline-block rounded-[9px] bg-primary px-[2.4rem] py-[1.6rem] font-custom text-[2rem] font-semibold text-foreground sm:ml-[1.6rem] sm:px-[3.2rem] sm:py-[1.6rem]">
+              <a className="ml-[1rem] inline-block rounded-[9px] bg-primary px-[2.4rem] py-[1.6rem] font-custom text-[2rem] font-semibold text-secondary  hover:bg-primary/85 sm:ml-[1.6rem] sm:px-[3.2rem] sm:py-[1.6rem]">
                 Learn more &darr;
               </a>
             </Link>

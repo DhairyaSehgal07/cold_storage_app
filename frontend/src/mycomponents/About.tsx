@@ -1,4 +1,4 @@
-const SignUpForm = () => {
+const About = () => {
   return (
     <>
       <section className="section-cta pb-[12.8rem] " id="cta">
@@ -16,4 +16,4 @@ const SignUpForm = () => {
   );
 };
 
-export default SignUpForm;
+export default About;

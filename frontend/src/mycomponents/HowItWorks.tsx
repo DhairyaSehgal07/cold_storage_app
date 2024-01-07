@@ -107,7 +107,9 @@ const HowItWorks = () => {
             <div className="mx-auto grid max-w-[120rem] grid-cols-2 items-center gap-x-[6.4rem] gap-y-[9.6rem] px-[3.2rem] ">
               <div className="step-text-box">
                 <p className="mb-[1.2rem] text-[8.6rem] font-semibold text-gray-200 ">
-                  01
+                  <span className="cursor-pointer hover:text-primary/85">
+                    01
+                  </span>
                 </p>
                 <h3 className="mb-[3.2rem] text-[2.4rem] font-semibold leading-10 tracking-[-0.5px] lg:text-[3rem]">
                   Register with your store-Admin
@@ -146,8 +148,10 @@ const HowItWorks = () => {
                 />
               </div>
               <div className="step-text-box">
-                <p className="mb-[1.2rem] text-[8.6rem] font-semibold text-gray-200">
-                  02
+                <p className="  mb-[1.2rem] text-[8.6rem] font-semibold text-gray-200">
+                  <span className="cursor-pointer hover:text-primary/85">
+                    02
+                  </span>
                 </p>
                 <h3 className="mb-[3.2rem] text-[2.4rem] font-semibold leading-10 tracking-[-0.5px] lg:text-[3rem]">
                   fill in details about the crop
@@ -162,7 +166,9 @@ const HowItWorks = () => {
 
               <div>
                 <p className="mb-[1.2rem] text-[8.6rem] font-semibold text-gray-200">
-                  03
+                  <span className="cursor-pointer hover:text-primary/85">
+                    03
+                  </span>
                 </p>
                 <h3 className=" mb-[3.2rem] text-[2.4rem] font-semibold leading-10 tracking-[-0.5px] lg:text-[3rem] ">
                   Receive confirmation on WhatsApp

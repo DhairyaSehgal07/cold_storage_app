@@ -59,7 +59,7 @@ const Pricing = () => {
                 <div className=" mt-[4.8rem] text-center">
                   <a
                     href="#"
-                    className="mr-[1rem] inline-block rounded-[9px] bg-primary px-[4.2rem] py-[1.8rem] font-custom text-[2rem] font-semibold text-foreground shadow duration-100 hover:bg-primary/90 "
+                    className="mr-[1rem] inline-block rounded-[9px] bg-primary px-[4.2rem] py-[1.8rem] font-custom text-[2rem] font-semibold text-secondary shadow duration-100 hover:bg-primary/85 "
                   >
                     Start storing
                   </a>
@@ -118,7 +118,7 @@ const Pricing = () => {
                 <div className="mt-[4.8rem] text-center">
                   <a
                     href="#"
-                    className="mr-[1rem] inline-block rounded-[9px] bg-primary px-[4.2rem] py-[1.8rem] font-custom text-[2rem] font-semibold text-foreground shadow duration-100 hover:bg-primary/90  "
+                    className="mr-[1rem] inline-block rounded-[9px] bg-primary px-[4.2rem] py-[1.8rem] font-custom text-[2rem] font-semibold text-secondary  shadow duration-100 hover:bg-primary/90  "
                   >
                     Start storing
                   </a>
@@ -230,7 +230,7 @@ const Pricing = () => {
                 <div className=" mt-[4.8rem] text-center">
                   <a
                     href="#"
-                    className="mr-[1.6rem] inline-block rounded-[9px] bg-primary px-[4.8rem] py-[0.6rem]  font-custom text-[2rem] font-semibold text-foreground no-underline shadow duration-100 hover:bg-primary/90 md:px-[3.2rem] md:py-[1.6rem] "
+                    className="mr-[1.6rem] inline-block rounded-[9px] bg-primary px-[4.8rem] py-[0.6rem]  font-custom text-[2rem] font-semibold text-secondary no-underline shadow duration-100 hover:bg-primary/85 md:px-[3.2rem] md:py-[1.6rem] "
                   >
                     Start storing
                   </a>
@@ -289,7 +289,7 @@ const Pricing = () => {
                 <div className="mt-[4.8rem] text-center">
                   <a
                     href="#"
-                    className="mr-[1.6rem] inline-block rounded-[9px] bg-primary px-[4.8rem] py-[0.6rem]  font-custom text-[2rem] font-semibold text-foreground no-underline shadow duration-100 hover:bg-primary/90 md:px-[3.2rem] md:py-[1.6rem] "
+                    className="mr-[1.6rem] inline-block rounded-[9px] bg-primary px-[4.8rem] py-[0.6rem]  font-custom text-[2rem] font-semibold text-secondary no-underline shadow duration-100 hover:bg-primary/85  md:px-[3.2rem] md:py-[1.6rem] "
                   >
                     Start storing
                   </a>
